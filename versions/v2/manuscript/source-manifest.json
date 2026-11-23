@@ -1,0 +1,42 @@
+{
+  "LICENSE": {
+    "bytes": 227,
+    "sha256": "cc3daf945a4ed3da7a1575ddbdc44496903e28f83e3d53c997af4d49b7b163e7"
+  },
+  "README.md": {
+    "bytes": 4522,
+    "sha256": "0421d2edd00468b055418f59271164e4d7ae1c57279f23b6b10b1e99eb3fb81e"
+  },
+  "coverage.json": {
+    "bytes": 6530,
+    "sha256": "681b7afbf879b7a057ce00b09c4674d0081e6b1f9d607dd626ad152788d777a3"
+  },
+  "metadata.json": {
+    "bytes": 2055,
+    "sha256": "504dbce441641b5e62d64d08b244ae0fefedac26d334ad4949cafc8b5019d8f8"
+  },
+  "note.tex": {
+    "bytes": 19998,
+    "sha256": "94e842089dd4527843a598ca04a0be17e0d3ae7c53a5df187987d4c0ed9ba0f8"
+  },
+  "requirements.txt": {
+    "bytes": 14,
+    "sha256": "25f9f1fb1988b230147a1d3092d34e09c069eb7a6c6d6df46b3973b9f2d36efc"
+  },
+  "sibling-verification.json": {
+    "bytes": 1828,
+    "sha256": "f59edeb4184a4b8ed3fd0dc1d2067363da47d11a1c9fe95857e88d14cfce5e06"
+  },
+  "verification.json": {
+    "bytes": 933,
+    "sha256": "da4d313199dc85680407e85382a3c050b0d07583decb885ef9ae69229f63f0aa"
+  },
+  "verify.py": {
+    "bytes": 6767,
+    "sha256": "ae745796b6a64bcf9a15b12889afe68869fcd2959874da749fc5a78d6655797c"
+  },
+  "verify_siblings.py": {
+    "bytes": 8923,
+    "sha256": "089912c2a719c3c736d8293119f5becd80eaa20054ab12e58ba95e3791a25eb7"
+  }
+}

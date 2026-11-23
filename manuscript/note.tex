@@ -1,0 +1,424 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,array,booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Nc}{\mathcal N_c}
+\newcommand{\R}{\mathbb R}
+\title{Exact W and generalized-GHZ Bell-measurement optima\\
+\large Completing Chakrabarty--Kundu (2026), Section III D, page 5:\\
+Table III and Eq.~(15), with the Horodecki (1995) single-node consequence}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\
+\small ChronoAI Pte Ltd, Singapore}
+\date{8 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For Chakrabarty and Kundu, arXiv:2610.35838v1 (2026), Section III D,
+page 5, Table III and Eq.~(15), we complete the W-state and generalized-GHZ
+Bell-measurement optimizations and recover the W single-node value from
+Horodecki et al.~(1995). The W-state value is exactly
+$\sqrt{13}/3$. We prove the upper bound over both central orthonormal
+frames and every parity-index pair, including identity indices and repeated
+pairs. A quadratic identity for the W correlation tensor reduces the proof
+to Parseval's identity and a two-by-two submatrix estimate. Consequently the
+white-noise threshold in this measurement class is exactly $3/\sqrt{13}$;
+ignoring either central node gives $2\sqrt2/3$. An ellipsoid bound gives
+$\mathcal N_c(\mathrm{GHZ}_\alpha)=\sqrt{1+\sin^2(2\alpha)}$,
+settling the neighboring conjecture. We also give the unequal-visibility
+threshold and explicit W-state entanglement-swapping probabilities.
+\end{abstract}
+
+\section{The optimization and its exact value}
+For two identical tripartite sources, Chakrabarty and Kundu
+\cite[Proposition 1, Eqs.~(10)--(12)]{CK} express the closed-network
+Bell-state-measurement value as an optimization over two frames and two
+parities. Their W-state example on page~5 and Table~III give the lower bound
+$\sqrt{13}/3$ and report no larger numerical value. We prove that this bound
+is sharp, and settle their generalized-GHZ exact-value conjecture at
+Eq.~(15). The measurement class is the one specified in their Section~II~C:
+each central node reads the commuting parities associated with one
+orthonormal frame. The larger projective-measurement class denoted by
+$\mathcal N_c^{\mathrm{prod}}$ in that paper is a different optimization.
+Bilocal inequalities originate in the independent-source formulation of
+Branciard et al.~\cite{BRGP}; a wider account of network nonlocality is
+given by Tavakoli et al.~\cite{TPRL}.
+
+Write $x,y,z$ for the standard basis of $\R^3$, and
+$\sigma=(\sigma_x,\sigma_y,\sigma_z)$ for the Pauli matrices. Set
+\[
+ |W\rangle=\frac{|001\rangle+|010\rangle+|100\rangle}{\sqrt3},
+ \qquad \rho_W=|W\rangle\langle W|.
+\]
+The tensor order is central node, end node, central node. Let
+$e=(e_1,e_2,e_3)$ and $f=(f_1,f_2,f_3)$ be real orthonormal frames;
+set $A_0=C_0=\mathbf1$, $A_i=e_i\cdot\sigma$ and $C_j=f_j\cdot\sigma$.
+Define the vectors and the orthogonal-direction functional by
+\begin{align}
+ (\tau_{\mu\nu})_k
+ &=\Tr(\rho_W A_\mu\otimes\sigma_k\otimes C_\nu),
+ \quad \mu,\nu\in\{0,1,2,3\},\ k\in\{x,y,z\},\label{eq:tau}\\
+ \Lambda(u,v)&=\max_{\substack{|n|=|n'|=1\\n\cdot n'=0}}
+       \bigl[(u\cdot n)^2+(v\cdot n')^2\bigr].\label{eq:lambda}
+\end{align}
+The value in the source is
+\begin{equation}
+ \Nc(W)^2=\max_{e,f}\max_{\mu,\nu,\mu',\nu'}
+       \Lambda(\tau_{\mu\nu},\tau_{\mu'\nu'}).\label{eq:opt}
+\end{equation}
+All maxima exist: the frame spaces and the set of orthonormal direction
+pairs are compact, the functions are continuous, and the index sets are
+finite. Orientation of a frame is immaterial to the maximum: changing the
+sign of one axis changes only signs of selected correlation vectors, and
+\eqref{eq:lambda} is unchanged by either sign.
+
+\begin{theorem}\label{thm:main}
+In the class of \eqref{eq:opt}, $\Nc(W)^2=13/9$ and
+$\Nc(W)=\sqrt{13}/3$. The upper bound includes identity indices and
+repeated index pairs.
+\end{theorem}
+
+\section{A complete upper-bound proof}
+For unit $a,c\in\R^3$ put
+\begin{align}
+ T(a,c)&=\frac13\bigl(2(a_xc_z+a_zc_x),\,
+             2(a_yc_z+a_zc_y),\,
+             2a_xc_x+2a_yc_y-3a_zc_z\bigr),\label{eq:T}\\
+ D&=\operatorname{diag}(2,2,-1),\qquad B(a,c)=a^{\mathsf T}Dc.
+\end{align}
+Direct Pauli expectations in \eqref{eq:tau} give
+\begin{equation}\label{eq:identities}
+ \tau_{ij}=T(e_i,f_j),\quad
+ \tau_{i0}=De_i/3,\quad \tau_{0j}=Df_j/3,\quad \tau_{00}=z/3
+ \qquad(i,j>0).
+\end{equation}
+For clarity, the only nonzero three-body Pauli expectations are
+$\langle\sigma_z\otimes\sigma_z\otimes\sigma_z\rangle=-1$
+and the six permutations of $(\sigma_x,\sigma_x,\sigma_z)$ and
+$(\sigma_y,\sigma_y,\sigma_z)$, each equal to $2/3$.
+The two-body correlation matrix of any pair of qubits is $D/3$,
+and each one-qubit Bloch vector is $z/3$. These statements give every
+entry in \eqref{eq:identities}.
+
+Expanding \eqref{eq:T} and using $|a|=|c|=1$ gives the key identity
+\begin{equation}\label{eq:key}
+ 9|T(a,c)|^2=B(a,c)^2+4a_z^2+4c_z^2.
+\end{equation}
+Indeed, before imposing unit lengths, the difference of the two sides is
+$4c_z^2(|a|^2-1)+4a_z^2(|c|^2-1)$.
+Cauchy--Schwarz yields $B(a,c)^2\leq|Dc|^2=4-3c_z^2$,
+so \eqref{eq:key} implies $|T(a,c)|^2\leq1$.
+An identity index instead gives
+\begin{equation}\label{eq:idbound}
+ |\tau_{i0}|^2=(4-3(e_i)_z^2)/9\leq4/9,
+ \quad |\tau_{0j}|^2\leq4/9,\quad |\tau_{00}|^2=1/9.
+\end{equation}
+
+Write $B_{ij}=B(e_i,f_j)$, $\alpha_i=(e_i)_z^2$ and
+$\beta_j=(f_j)_z^2$. Parseval's identity gives
+\begin{equation}\label{eq:parseval}
+ \sum_i\alpha_i=\sum_j\beta_j=1,\qquad
+ \sum_j B_{ij}^2=4-3\alpha_i,\quad
+ \sum_i B_{ij}^2=4-3\beta_j,\quad
+ \sum_{i,j}B_{ij}^2=9.
+\end{equation}
+We now bound every pair of distinct nonidentity entries.
+
+\paragraph{One common frame index.}
+If $j\ne j'$, equations \eqref{eq:key}--\eqref{eq:parseval} imply
+\begin{align*}
+9\bigl(|T(e_i,f_j)|^2+|T(e_i,f_{j'})|^2\bigr)
+ &=B_{ij}^2+B_{ij'}^2+8\alpha_i+4(\beta_j+\beta_{j'})\\
+ &\leq(4-3\alpha_i)+8\alpha_i+4
+   =8+5\alpha_i\leq13.
+\end{align*}
+If the common index is on the other frame, use the symmetry
+$T(a,c)=T(c,a)$ and exchange the frames.
+
+\paragraph{Both frame indices different.}
+If $i\ne i'$ and $j\ne j'$, let $k$ and $\ell$ be the omitted
+indices in the two frames. The squared Frobenius norm of the remaining
+two-by-two block is, by \eqref{eq:parseval},
+\[
+ \sum_{r\ne k,\,s\ne\ell}B_{rs}^2
+ =9-(4-3\alpha_k)-(4-3\beta_\ell)+B_{k\ell}^2
+ =1+3\alpha_k+3\beta_\ell+B_{k\ell}^2.
+\]
+It bounds $B_{ij}^2+B_{i'j'}^2$. Applying \eqref{eq:key} twice gives
+\begin{align*}
+ 9\bigl(|T(e_i,f_j)|^2+|T(e_{i'},f_{j'})|^2\bigr)
+ &\leq9-\alpha_k-\beta_\ell+B_{k\ell}^2\\
+ &\leq13-\alpha_k-4\beta_\ell\leq13,
+\end{align*}
+where $B_{k\ell}^2\leq4-3\beta_\ell$ was used in the second line.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+For arbitrary vectors, Cauchy--Schwarz gives
+$\Lambda(u,v)\leq|u|^2+|v|^2$.
+If either selected entry has an identity index, \eqref{eq:idbound}
+and the unit bound for the other entry give $\Lambda\leq4/9+1=13/9$.
+If both entries are nonidentity and distinct, the preceding two cases
+give the same bound. If the index pairs coincide, Bessel's inequality
+gives
+\[
+ (u\cdot n)^2+(u\cdot n')^2\leq|u|^2\leq1
+\]
+for orthonormal $n,n'$. This covers all index choices.
+For the reverse inequality take both frames to be $(x,y,z)$.
+Then \eqref{eq:T} gives $\tau_{33}=-z$ and $\tau_{13}=2x/3$.
+The choices $n=-z$, $n'=x$ attain $1+4/9=13/9$ in
+\eqref{eq:lambda}. Taking the nonnegative square root proves the result.
+\end{proof}
+
+\section{Noise, single-node values, and coverage}
+\begin{corollary}\label{cor:noise}
+For $\rho_v=v\rho_W+(1-v)\mathbf1/8$, $0\leq v\leq1$,
+the identical-source optimum is $\Nc(\rho_v)=v\sqrt{13}/3$.
+It exceeds the local bound $1$ exactly when $v>3/\sqrt{13}$.
+\end{corollary}
+\begin{proof}
+Every observable defining a component of \eqref{eq:tau} is traceless,
+because its middle factor is a Pauli matrix. Thus
+$\tau_{\mu\nu}(\rho_v)=v\tau_{\mu\nu}(\rho_W)$ and
+$\Lambda(vu,vv')=v^2\Lambda(u,v')$.
+Equation \eqref{eq:opt} and Theorem~\ref{thm:main} give the assertion,
+including $v=0$. The threshold is approximately $0.832050$.
+\end{proof}
+
+\begin{corollary}\label{cor:single}
+With either central node ignored, the exact W-state value is
+$N_A=N_C=2\sqrt2/3<1$; for $\rho_v$ it is $2\sqrt2\,v/3$.
+This is also the Horodecki CHSH criterion~\cite{HHH} applied to the
+reduced W-state correlation matrix, as in \cite[Section III B]{CK}.
+\end{corollary}
+\begin{proof}
+Ignoring Charlie restricts both pairs to $\nu=\nu'=0$.
+By \eqref{eq:idbound}, the sum of their squared norms is at most $8/9$,
+also when $\mu=0$ or $\mu'=0$. Taking $e_1=x$ and $e_2=y$
+gives the orthogonal vectors $2x/3$ and $2y/3$, attaining $8/9$.
+The state is symmetric under exchange of its qubits, so the other
+central-node restriction has the same value. Noise scales as above.
+\end{proof}
+
+\begin{corollary}\label{cor:unequal}
+For independent W sources with visibilities $v_1,v_2\in[0,1]$, the exact
+value is $\sqrt{13v_1v_2}/3$. It violates the inequality exactly when
+$v_1v_2>9/13$; a single central node gives $2\sqrt{2v_1v_2}/3$.
+\end{corollary}
+\begin{proof}
+In the source-factorized correlators of \cite[Eq.~(B3)]{CK}, every
+factor belonging to source $i$ contains a traceless end-node observable
+and is multiplied by $v_i$. Thus $I,J$ are multiplied by $v_1v_2$,
+and $\sqrt{|I|}+\sqrt{|J|}$ by $\sqrt{v_1v_2}$ for every strategy.
+The factor is strategy-independent, so the same scaling holds for the
+maximum, including zero visibility. Apply Theorem~\ref{thm:main}
+and Corollary~\ref{cor:single}.
+\end{proof}
+
+\section{The neighboring generalized-GHZ conjecture}
+For $|G_\alpha\rangle=\cos\alpha|000\rangle+\sin\alpha|111\rangle$,
+$0\leq\alpha\leq\pi/2$, the source gives the lower bound
+$\sqrt{1+\sin^2(2\alpha)}$ in Eq.~(15), and says
+``we have not proven this'' about its exactness. The following proves
+that expectation, with the product-state endpoints included.
+
+\begin{corollary}\label{cor:ghz}
+Writing $s=\sin(2\alpha)$, one has
+\[
+ \mathcal N_c(G_\alpha)=\sqrt{1+s^2},\qquad N_A=N_C=1.
+\]
+For visibilities $v_1,v_2$ these values are multiplied by
+$\sqrt{v_1v_2}$; the closed-network violation condition is
+$v_1v_2(1+s^2)>1$.
+\end{corollary}
+\begin{proof}
+Put $t=\cos(2\alpha)$, so $s^2+t^2=1$. Direct Pauli expectations give
+\begin{align*}
+ T_G(a,c)&=\bigl(s(a_xc_x-a_yc_y),-s(a_xc_y+a_yc_x),t a_zc_z\bigr),\\
+ \tau_{i0}&=(e_i)_z z,\quad \tau_{0j}=(f_j)_z z,\quad \tau_{00}=t z.
+\end{align*}
+For unit $a,c$, the vector
+$q=(a_xc_x-a_yc_y,-a_xc_y-a_yc_x,a_zc_z)$ satisfies
+\[
+ |q|^2=(1-a_z^2)(1-c_z^2)+a_z^2c_z^2\leq1.
+\]
+Indeed, $u+w-2uw=u(1-w)+w(1-u)\geq0$ for
+$u=a_z^2,w=c_z^2\in[0,1]$. Since $T_G=\operatorname{diag}(s,s,t)q$,
+Cauchy--Schwarz gives, for every unit $n$,
+\begin{equation}\label{eq:ellipsoid}
+ (T_G(a,c)\cdot n)^2\leq s^2+(t^2-s^2)n_z^2.
+\end{equation}
+If both selected entries have nonidentity indices, their contributions
+along $n\perp n'$ sum to at most
+$2s^2+(t^2-s^2)(n_z^2+n_z'^2)\leq\max(2s^2,1)\leq1+s^2$,
+using $0\leq n_z^2+n_z'^2\leq1$. If just one entry has an identity
+index, its vector is $h z$ with $|h|\leq1$. Put it along $n$;
+\eqref{eq:ellipsoid} bounds the sum by
+\[
+ n_z^2+s^2+(t^2-s^2)n_z'^2
+ \leq1+s^2-2s^2 n_z'^2\leq1+s^2.
+\]
+If both entries have an identity index, their sum is at most
+$n_z^2+n_z'^2\leq1$. Thus all indices, including repetitions,
+are covered. Standard frames give $\tau_{30}=z$ and $\tau_{11}=s x$,
+attaining $1+s^2$. With one central node ignored all vectors are
+parallel to $z$, and $\tau_{30}=z$ attains the exact value $1$.
+The visibility argument of Corollary~\ref{cor:unequal} applies unchanged.
+\end{proof}
+
+For maximally entangled GHZ sources, the larger product-projective class
+also has exact value $\sqrt{2v_1v_2}$. This is a consequence already
+contained in Chakrabarty--Kundu~\cite[Theorem~4(i), $n=2$; Eq.~(14)]{CK}:
+the universal $\sqrt2$ bound applies to arbitrary central measurements,
+and Bell-state measurements attain it. The visibility scaling then gives
+the stated noisy value. Thus the GHZ optimality suggestion in
+Section~III~D and Section~VII follows from the source's own theorem;
+the W product-projective optimum is a different question.
+
+\section{W-state swapping: exact outcome probabilities}
+The W-state paragraph of \cite[Section IV, p.~6]{CK} gives probabilities
+$4/9$, $5/18$ and average concurrence $2/3$. The following explicit
+calculation recovers those values and quantifies the one-node herald.
+Concurrence is the two-qubit quantity of Wootters~\cite{Wootters}.
+
+\begin{corollary}\label{cor:swapping}
+For standard-frame Bell measurements at both central nodes on two pure
+W sources, the end-node concurrence is $1$ with probability $4/9$,
+$4/5$ with probability $5/18$, and $0$ otherwise. Its average is $2/3$.
+With the outcome of just one central node retained, the average
+concurrence is $2/9$.
+\end{corollary}
+\begin{proof}
+Write $\Phi_\epsilon=(|00\rangle+\epsilon|11\rangle)/\sqrt2$ and
+$\Psi_\epsilon=(|01\rangle+\epsilon|10\rangle)/\sqrt2$,
+$\epsilon=\pm1$. Projection of the nine computational terms of
+$|W\rangle^{\otimes2}$ gives the unnormalized end-node vectors
+\[
+ \begin{array}{c|c}
+ \text{central outcomes}&\text{end-node vector}\\\hline
+ (\Phi_\epsilon,\Phi_\eta)&((\epsilon+\eta)|00\rangle+|11\rangle)/6\\
+ (\Phi_\epsilon,\Psi_\eta)&(\eta|01\rangle+|10\rangle)/6\\
+ (\Psi_\epsilon,\Phi_\eta)&(\epsilon|01\rangle+|10\rangle)/6\\
+ (\Psi_\epsilon,\Psi_\eta)&(\epsilon+\eta)|00\rangle/6
+ \end{array}
+\]
+For a pure vector $(a,b,c,d)$ of squared norm $p$, its outcome has
+probability $p$ and conditional concurrence $2|ad-bc|/p$.
+The eight mixed $\Phi,\Psi$ outcomes each have probability $1/18$
+and concurrence $1$. The two equal-sign $\Phi,\Phi$ outcomes each
+have probability $5/36$ and concurrence $4/5$. The remaining
+nonzero outcomes are product states. Hence the average is
+$4/9+(5/18)(4/5)=2/3$.
+
+Summing the projectors over the unobserved central outcome gives,
+for a retained $\Phi_\pm$ or $\Psi_\pm$, respectively,
+\[
+ \frac1{36}\begin{pmatrix}4&0&0&\pm2\\0&2&0&0\\0&0&2&0\\\pm2&0&0&2\end{pmatrix},
+ \qquad
+ \frac1{36}\begin{pmatrix}4&0&0&0\\0&2&\pm2&0\\0&\pm2&2&0\\0&0&0&0\end{pmatrix}.
+\]
+Their traces are $5/18$ and $2/9$. For an unnormalized matrix $R$,
+Wootters' formula~\cite[Eq.~(10)]{Wootters} gives probability times
+concurrence as $\max(0,\lambda_1-\lambda_2-\lambda_3-\lambda_4)$,
+where the $\lambda_i$ are the decreasing square roots of the eigenvalues
+of $R(\sigma_y\otimes\sigma_y)R^*(\sigma_y\otimes\sigma_y)$.
+For each $\Phi$ outcome they are
+$(\sqrt2+1)/18,1/18,1/18,(\sqrt2-1)/18$, giving zero.
+For each $\Psi$ outcome they are $1/9,0,0,0$, giving conditional
+concurrence $(1/9)/(2/9)=1/2$. The mean is $2(2/9)(1/2)=2/9$.
+\end{proof}
+
+\section{Source coverage and verification}
+The source already proves the optimization reduction and the
+visibility scaling mechanism. Table~\ref{tab:coverage} distinguishes
+these inherited results from the completed upper bounds and deductions.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}p{.43\linewidth}p{.51\linewidth}@{}}
+\toprule
+Source item in \cite{CK} & Mathematical coverage\\
+\midrule
+Proposition 1, Eqs.~(11)--(12), p.~4--5 & Prior proof cited; optimization
+reduction used as stated.\\[3pt]
+Section III D, W paragraph and Table III, p.~5 & Prior lower bound cited;
+sharpness established: $\Nc(W)=\sqrt{13}/3$ (Theorem~\ref{thm:main}).\\[3pt]
+Same paragraph; Appendix G, critical visibilities & Exact consequence:
+$v_c=3/\sqrt{13}$ (Corollary~\ref{cor:noise}); scaling credits the source.\\[3pt]
+Section III B, $N_A,N_C$; Section III D, W & Reproved; prior proof
+Horodecki et al.~(1995) with the source reduction:
+$N_A=N_C=2\sqrt2/3$ (Corollary~\ref{cor:single}).\\[3pt]
+Section III D, generalized GHZ; Eq.~(15), p.~5 & Proved exact:
+$\sqrt{1+\sin^2(2\alpha)}$ (Corollary~\ref{cor:ghz}).\\[3pt]
+Section III D and VII, GHZ product-projective optimality & Prior proof
+Chakrabarty--Kundu (2026), Theorem 4(i), $n=2$, with Eq.~(14).\\[3pt]
+Section IV, W swapping paragraph, p.~6 & Reproved; prior result
+Chakrabarty--Kundu (2026): probabilities $4/9,5/18$ and mean
+concurrence $2/3$ (Corollary~\ref{cor:swapping}).\\[3pt]
+Unequal visibilities; exact one-node W swapping mean & Not posed;
+proved: Corollaries~\ref{cor:unequal} and~\ref{cor:swapping}.\\[3pt]
+Section III D, $\mathcal N_c^{\mathrm{prod}}(W)$; Section VII,
+general measurements & Not covered; the larger-class optimum remains distinct.\\[3pt]
+Section V, Eq.~(22), W open-network maximum & Not covered.\\[3pt]
+Section VII, higher-dimensional end nodes, many-correlator inequalities,
+genuine multipartite certification & Not covered.\\
+\bottomrule
+\end{tabular}
+\caption{Coverage of the exact W-state question and neighboring questions.}
+\label{tab:coverage}
+\end{table}
+
+\paragraph{Verification scope.}
+In the pinned
+\href{https://github.com/the-omega-institute/trureturing/blob/a252cc46f0e145418a978217b8abd41a73fd820d/D5/S3/Quantum/MeasurementGeometry/WStateBellMeasurementOptimum.lean}{\texttt{WStateBellMeasurementOptimum.lean}},
+the declaration \texttt{result : claim} states the exact W optimum: the nonnegative
+square root of the supremum of
+\eqref{eq:lambda}, with the trace-defined W state and all frames and central
+indices, equals $\sqrt{13}/3$. Its \texttt{squared\_optimum} establishes
+the squared value $13/9$, \texttt{pair\_upper\_bound} covers all frames
+and central indices, and \texttt{attainment} supplies the standard-frame
+witness. Corollaries~\ref{cor:noise}--\ref{cor:swapping} have the written
+proofs above; the generalized-GHZ and swapping claims are separate from
+that Lean declaration. The accompanying
+\texttt{verify.py} checks all 64 Pauli tensor entries, the polynomial identity
+underlying \eqref{eq:key}, and a finite rational-frame family. These finite
+checks supplement the all-frame proof above. The file
+\texttt{verify\_siblings.py} checks the generalized-GHZ polynomial
+identities and finite rational parameter/frame families, all sixteen
+W Bell-outcome vectors and both one-node density-matrix families. The general
+generalized-GHZ bound is the written ellipsoid proof, not an inference
+from those finite checks.
+
+\begin{thebibliography}{9}
+\bibitem{CK} S. Chakrabarty and A. Kundu,
+\emph{Network nonlocality with tripartite entangled sources},
+arXiv:2610.35838v1 (26 October 2026),
+\href{https://arxiv.org/abs/2610.35838v1}{arXiv:2610.35838v1}.
+\bibitem{BRGP} C. Branciard, D. Rosset, N. Gisin and S. Pironio,
+\emph{Bilocal versus nonbilocal correlations in entanglement-swapping
+experiments}, Physical Review A \textbf{85}, 032119 (2012),
+\href{https://doi.org/10.1103/PhysRevA.85.032119}{doi:10.1103/PhysRevA.85.032119}.
+\bibitem{TPRL} A. Tavakoli, A. Pozas-Kerstjens, M.-X. Luo and M.-O. Renou,
+\emph{Bell nonlocality in networks}, Reports on Progress in Physics
+\textbf{85}, 056001 (2022),
+\href{https://doi.org/10.1088/1361-6633/ac41bb}{doi:10.1088/1361-6633/ac41bb}.
+\bibitem{HHH} R. Horodecki, P. Horodecki and M. Horodecki,
+\emph{Violating Bell inequality by mixed spin-$\frac12$ states:
+necessary and sufficient condition}, Physics Letters A \textbf{200},
+340--344 (1995),
+\href{https://doi.org/10.1016/0375-9601(95)00214-N}{doi:10.1016/0375-9601(95)00214-N}.
+\bibitem{Wootters} W. K. Wootters,
+\emph{Entanglement of formation of an arbitrary state of two qubits},
+Physical Review Letters \textbf{80}, 2245--2248 (1998),
+\href{https://doi.org/10.1103/PhysRevLett.80.2245}{doi:10.1103/PhysRevLett.80.2245},
+\href{https://arxiv.org/abs/quant-ph/9709029}{arXiv:quant-ph/9709029}.
+\end{thebibliography}
+\medskip\noindent\small
+\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+\end{document}

@@ -1,0 +1,15 @@
+{
+  "id": "w-state-bsm-optimum",
+  "revision": 2,
+  "problem_ids": ["w-state-bsm-optimum"],
+  "topic": "Exact W and generalized-GHZ closed-network Bell-measurement optima in Chakrabarty and Kundu, arXiv:2610.35838v1, Section III D, page 5, Table III and Eq. (15)",
+  "title": "Exact W and generalized-GHZ Bell-measurement optima: Completing Chakrabarty–Kundu (2026), Section III D, page 5: Table III and Eq. (15), with the Horodecki (1995) single-node consequence",
+  "creators": [
+    {"name": "Haobo Ma", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Wenlin Zhang", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "For Chakrabarty and Kundu, arXiv:2610.35838v1 (2026), Section III D, page 5, Table III and Eq. (15), we complete the W-state and generalized-GHZ Bell-measurement optimizations and recover the W single-node value from Horodecki et al. (1995). The W-state value is exactly sqrt(13)/3. We prove the upper bound over both central orthonormal frames and every parity-index pair, including identity indices and repeated pairs. A quadratic identity for the W correlation tensor reduces the proof to Parseval's identity and a two-by-two submatrix estimate. Consequently the white-noise threshold in this measurement class is exactly 3/sqrt(13); ignoring either central node gives 2*sqrt(2)/3. An ellipsoid bound gives N_c(GHZ_alpha)=sqrt(1+sin^2(2alpha)), settling the neighboring conjecture. We also give the unequal-visibility threshold and explicit W-state entanglement-swapping probabilities.",
+  "summary": "Complete all-frame W and generalized-GHZ Bell-measurement optima, exact unequal-visibility thresholds, the Horodecki single-node consequence and explicit W swapping probabilities, including mean concurrence 2/9 for a single retained central outcome.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/a252cc46f0e145418a978217b8abd41a73fd820d/D5/S3/Quantum/MeasurementGeometry/WStateBellMeasurementOptimum.lean"
+}

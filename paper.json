@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 99031,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "94eafb2cf9b80d772ea73e12c318cd9967690dc615aa21308b4388c7734412b1",
+      "sha256": "94eafb2cf9b80d772ea73e12c318cd9967690dc615aa21308b4388c7734412b1"
+    },
+    "source": {
+      "bytes": 20880,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "455dbde6e54731173c5d40430c7438c9e7a9c2be0769d1642045d1a1240c2419",
+      "sha256": "455dbde6e54731173c5d40430c7438c9e7a9c2be0769d1642045d1a1240c2419"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "For Chakrabarty and Kundu, arXiv:2610.35838v1 (2026), Section III D, page 5, Table III and Eq. (15), we complete the W-state and generalized-GHZ Bell-measurement optimizations and recover the W single-node value from Horodecki et al. (1995). The W-state value is exactly sqrt(13)/3. We prove the upper bound over both central orthonormal frames and every parity-index pair, including identity indices and repeated pairs. A quadratic identity for the W correlation tensor reduces the proof to Parseval's identity and a two-by-two submatrix estimate. Consequently the white-noise threshold in this measurement class is exactly 3/sqrt(13); ignoring either central node gives 2*sqrt(2)/3. An ellipsoid bound gives N_c(GHZ_alpha)=sqrt(1+sin^2(2alpha)), settling the neighboring conjecture. We also give the unequal-visibility threshold and explicit W-state entanglement-swapping probabilities.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "a252cc46f0e145418a978217b8abd41a73fd820d",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/a252cc46f0e145418a978217b8abd41a73fd820d/D5/S3/Quantum/MeasurementGeometry/WStateBellMeasurementOptimum.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 99031,
+      "sha256": "94eafb2cf9b80d772ea73e12c318cd9967690dc615aa21308b4388c7734412b1",
+      "url": "/api/v1/collected-papers/w-state-bsm-optimum/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-23T00:43:06.898381733Z",
+    "record": "w-state-bsm-optimum",
+    "repository_name": "w-state-bsm-optimum",
+    "source": {
+      "bytes": 20880,
+      "sha256": "455dbde6e54731173c5d40430c7438c9e7a9c2be0769d1642045d1a1240c2419",
+      "url": "/api/v1/collected-papers/w-state-bsm-optimum/files/source?version=2"
+    },
+    "title": "Exact W and generalized-GHZ Bell-measurement optima: Completing Chakrabarty–Kundu (2026), Section III D, page 5: Table III and Eq. (15), with the Horodecki (1995) single-node consequence",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-23T00:43:06.898381733Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "w-state-bsm-optimum"
+  }
+}

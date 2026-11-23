@@ -1,0 +1,11 @@
+{
+  "schema": "mathesis.materials.v1",
+  "work": "w-state-bsm-optimum",
+  "version": 2,
+  "repository_url": "https://github.com/mathesis-papers/w-state-bsm-optimum",
+  "site_url": "https://papers.trureturing.org/w-state-bsm-optimum/",
+  "doi": null,
+  "reading": {},
+  "slides": [],
+  "visualizations": []
+}

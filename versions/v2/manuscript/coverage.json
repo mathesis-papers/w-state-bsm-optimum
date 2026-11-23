@@ -1,0 +1,98 @@
+{
+  "primary_source": "https://arxiv.org/abs/2610.35838v1",
+  "source_date": "2026-10-26",
+  "items": [
+    {
+      "locator": "Section III B, Proposition 1, Eqs. (10)–(12), PDF pp. 4–5; Appendix B",
+      "source_statement": "N_c(rho)^2 = max over frames and all four central indices of Lambda(tau_mu_nu,tau_muprime_nuprime)",
+      "coverage": "Prior proof cited: Chakrabarty and Kundu (2026)",
+      "note_locator": "Section 1, Eq. (3)",
+      "scope": "Two identical sources, the specified same-frame parity Bell measurements, and projective qubit end-node measurements."
+    },
+    {
+      "locator": "Section III D, W states paragraph, PDF p. 5; Table III caption and W row",
+      "source_statement": "N_c(W) >= sqrt(13)/3; numerical optimization finds no larger value",
+      "coverage": "Prior proof cited for the lower bound; exact upper bound proved as a sharpening of the numerical expectation",
+      "note_locator": "Theorem 1, Section 2",
+      "scope": "All central orthonormal frames and all central parity pairs, including identity indices and repeated pairs; exact squared value 13/9."
+    },
+    {
+      "locator": "Section III D, W states critical visibility, PDF p. 5; Appendix G, Critical visibilities, PDF p. 14",
+      "source_statement": "The source reports critical visibility 0.832 and proves identical-source linear visibility scaling.",
+      "coverage": "Prior proof cited for scaling; exact threshold 3/sqrt(13) is a written consequence",
+      "note_locator": "Corollary 2",
+      "scope": "Identical white-noise W sources in the Bell-measurement class."
+    },
+    {
+      "locator": "Section III B, PDF p. 5, CHSH reduction; Section III D, PDF p. 6, N_A,N_C <= 1",
+      "source_statement": "The one-central-node value is half the maximal CHSH value of the two-qubit reduced state.",
+      "coverage": "Reproved; prior proof Horodecki, Horodecki and Horodecki (1995), applied via Chakrabarty and Kundu (2026)",
+      "note_locator": "Corollary 3",
+      "scope": "W reduced correlation matrix diag(2,2,-1)/3 gives N_A=N_C=2sqrt(2)/3; not the open-network value."
+    },
+    {
+      "locator": "Section III D, Generalized GHZ states, Eq. (15), PDF p. 5",
+      "source_statement": "N_c(GHZ_alpha) >= sqrt(1+sin(2alpha)^2); the source expects exactness but says it has not proven it.",
+      "coverage": "Proved: the explicitly conjectured exact value",
+      "note_locator": "Corollary 5",
+      "scope": "Every alpha in [0,pi/2], all frames and parity indices; N_A=N_C=1; the product-state endpoints are an extension."
+    },
+    {
+      "locator": "Section III D, GHZ states paragraph, PDF p. 5; Section VII, PDF p. 10; Theorem 4(i), n=2, PDF p. 9",
+      "source_statement": "The source suggests Bell measurements are optimal among product-projective central measurements for GHZ.",
+      "coverage": "Prior proof cited: Chakrabarty and Kundu (2026), Theorem 4(i), together with Eq. (14)",
+      "note_locator": "Section 4, paragraph after Corollary 5",
+      "scope": "Maximally entangled GHZ, not every generalized-GHZ state; exact value sqrt(2), with arbitrary central measurements bounded by the same value."
+    },
+    {
+      "locator": "Section IV, W states swapping paragraph, PDF p. 6",
+      "source_statement": "Concurrence 1 with probability 4/9, concurrence 4/5 with probability 5/18, mean concurrence 2/3.",
+      "coverage": "Reproved; prior result Chakrabarty and Kundu (2026)",
+      "note_locator": "Corollary 6 and the sixteen-outcome formula table",
+      "scope": "Two pure W sources and standard-frame Bell measurements at both central nodes."
+    },
+    {
+      "locator": "Appendix B, Eq. (B3); Appendix G, visibility argument",
+      "source_statement": "Unequal source visibilities are not posed as an exact optimization question.",
+      "coverage": "Not posed; proved",
+      "note_locator": "Corollaries 4 and 5",
+      "scope": "Multiply the pure W or generalized-GHZ optimum by sqrt(v1*v2); W violation iff v1*v2>9/13."
+    },
+    {
+      "locator": "Section IV, W states swapping paragraph, PDF p. 6",
+      "source_statement": "The source says that one central outcome already heralds some W entanglement; its exact average is not posed.",
+      "coverage": "Not posed; proved quantitative extension",
+      "note_locator": "Corollary 6, final two conditional matrices",
+      "scope": "Retain one standard-frame central Bell outcome and discard the other; Phi outcomes are separable, Psi outcomes have concurrence 1/2, average 2/9."
+    },
+    {
+      "locator": "Section III D, W product-projective measurements, PDF p. 5; Section VII",
+      "source_statement": "N_c^prod(W) >= 1.316 from a numerical search; 0.760 is an upper bound on its critical visibility.",
+      "coverage": "Not covered",
+      "scope": "The W two-frame theorem does not determine this larger measurement-class optimum."
+    },
+    {
+      "locator": "Section V, Theorem 3, Eq. (22), PDF p. 8; Table III",
+      "source_statement": "The open-network W optimum is numerically approximately 1.521.",
+      "coverage": "Not covered",
+      "scope": "A different network wiring and objective, not the single-central-node restriction of the closed network."
+    },
+    {
+      "locator": "Section VII, PDF p. 10",
+      "source_statement": "Higher-dimensional end nodes, many-correlator inequalities and genuine multipartite certification are suggested directions.",
+      "coverage": "Not covered",
+      "scope": "No universal statement about those broader questions is inferred."
+    }
+  ],
+  "lean": {
+    "url": "https://github.com/the-omega-institute/trureturing/blob/a252cc46f0e145418a978217b8abd41a73fd820d/D5/S3/Quantum/MeasurementGeometry/WStateBellMeasurementOptimum.lean",
+    "declarations": {
+      "D5.S3.Quantum.MeasurementGeometry.WStateBellMeasurementOptimum.result": "claim: square root of the all-frame, all-index W-state supremum equals sqrt(13)/3",
+      "squared_optimum": "The W squared supremum is 13/9",
+      "pair_upper_bound": "The W upper bound includes all orthonormal frames and central indices",
+      "attainment": "The standard frames and indices (3,3),(1,3) attain 13/9"
+    },
+    "written_scope": "Noise, single-node values, unequal visibilities, generalized-GHZ exactness and swapping are proved in note.tex, separately from this Lean declaration.",
+    "finite_scope": "verify.py checks the W tensor, identities and finite frames; verify_siblings.py checks the generalized-GHZ identities and finite families and all W swapping outcomes."
+  }
+}
