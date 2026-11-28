@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24409078",
     "current_version": 2,
     "doi": "10.5281/zenodo.24409079",
+    "kind": "note",
     "lean_source": {
       "revision": "a252cc46f0e145418a978217b8abd41a73fd820d",
       "url": "https://github.com/the-omega-institute/trureturing/blob/a252cc46f0e145418a978217b8abd41a73fd820d/D5/S3/Quantum/MeasurementGeometry/WStateBellMeasurementOptimum.lean"
@@ -55,10 +56,12 @@
     "title": "Exact W and generalized-GHZ Bell-measurement optima: Completing Chakrabarty–Kundu (2026), Section III D, page 5: Table III and Eq. (15), with the Horodecki (1995) single-node consequence",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-23T00:43:06.898381733Z",
         "revision": "2",
-        "version": 2
+        "version": 2,
+        "version_label": null
       }
     ],
     "work": "w-state-bsm-optimum"
